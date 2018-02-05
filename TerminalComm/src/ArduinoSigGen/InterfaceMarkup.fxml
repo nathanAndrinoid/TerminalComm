@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+
+<AnchorPane fx:id="root" maxWidth="-Infinity" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ArduinoSigGen.Controller">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.11428571428571428" maxHeight="-Infinity" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="${root.height}" prefWidth="${root.width}">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"  minHeight="0.0" minWidth="0.0">
+               <children>
+                  <ChoiceBox fx:id="portChoice" layoutX="91.0" layoutY="11.0" prefHeight="27.0" prefWidth="209.0" />
+                  <ChoiceBox fx:id="speedChoice" layoutX="442.0" layoutY="11.0" prefWidth="150.0" value="57600">
+                  	<items>
+				        <FXCollections fx:factory="observableArrayList">
+				            <String fx:value="300" />
+				            <String fx:value="1200" />
+				            <String fx:value="2400" />
+				            <String fx:value="4800" />
+				            <String fx:value="9600" />
+				            <String fx:value="19200" />
+				            <String fx:value="38400" />
+				            <String fx:value="57600" />
+				            <String fx:value="74880" />
+				            <String fx:value="115200" />
+				            <String fx:value="230400" />
+				            <String fx:value="250000" />
+				            <String fx:value="500000" />
+				            <String fx:value="1000000" />
+				            <String fx:value="2000000" />
+				        </FXCollections>
+				    </items>
+                  </ChoiceBox>
+                  <Label layoutX="24.0" layoutY="3.0" prefHeight="44.0" prefWidth="55.0" text="Port">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label layoutX="356.0" layoutY="10.0" text="Speed">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="346.0" prefWidth="638.0">
+               <children>
+                  <Button fx:id="CalculateButton" layoutX="417.0" layoutY="244.0" mnemonicParsing="false" text="Update Clock">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Label layoutX="37.0" layoutY="201.0" prefHeight="52.0" prefWidth="258.0" text="Measured Frequency">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label layoutX="106.0" layoutY="30.0" text="Frequency">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label layoutX="455.0" layoutY="30.0" text="Duty Cycle">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label layoutX="306.0" layoutY="110.0" text="Clock">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <TextField fx:id="FrequencyField" editable="false" layoutX="42.0" layoutY="63.0" prefHeight="27.0" prefWidth="234.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <TextField fx:id="ClockField" layoutX="221.0" layoutY="148.0" prefHeight="27.0" prefWidth="234.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <TextField fx:id="MeasuredFreq" layoutX="42.0" layoutY="253.0" prefHeight="27.0" prefWidth="234.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <TextField fx:id="DutyField" editable="false" layoutX="401.0" layoutY="59.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
